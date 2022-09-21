@@ -51,4 +51,13 @@ public class SimpleDate {
         return this.year - other.year - yearRemoved;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 9;
+        hash = 27 * hash + this.day;
+        hash = 27 * hash + this.month;
+        hash = 27 * hash + this.year;
+        
+        return hash;
+    }
 }

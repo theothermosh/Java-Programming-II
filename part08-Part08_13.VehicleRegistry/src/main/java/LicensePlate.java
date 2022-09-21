@@ -1,6 +1,4 @@
 
-import java.util.Objects;
-
 public class LicensePlate {
     // don't modify existing parts of this class
 
@@ -19,4 +17,23 @@ public class LicensePlate {
         return country + " " + liNumber;
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (object == null || this.getClass() != object.getClass()) {
+            return false;
+        }
+
+        if (object == this) {
+            return true;
+        }
+
+        LicensePlate compared = (LicensePlate) object;
+
+        return this.liNumber.equals(compared.liNumber) && this.country.equals(compared.country);
+    }
+
+    @Override
+    public int hashCode() {
+        return 55 + (Integer.valueOf(this.liNumber.charAt(0)) / 7);
+    }
 }

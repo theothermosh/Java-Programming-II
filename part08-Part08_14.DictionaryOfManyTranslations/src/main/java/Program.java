@@ -3,7 +3,7 @@ public class Program {
 
     public static void main(String[] args) {
         // Testaa sanakirjaa täällä
-//        DictionaryOfManyTranslations dictionary = new DictionaryOfManyTranslations();
+        DictionaryOfManyTranslations d = new DictionaryOfManyTranslations();
 //        dictionary.add("lie", "maata");
 //        dictionary.add("lie", "valehdella");
 //
@@ -13,5 +13,10 @@ public class Program {
 //        System.out.println(dictionary.translate("lie"));
 //        dictionary.remove("bow");
 //        System.out.println(dictionary.translate("bow"));
+        d.add("monkey","apina");
+        d.add("monkey","apfe");
+        d.add("cheese","juusto");
+        d.add("milk","maito");
+        System.out.println(d.translate("potato"));
     }
 }
